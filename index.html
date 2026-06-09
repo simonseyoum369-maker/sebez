@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebez Summer Camp | Weaving Innovation into Every Future</title>
+    <!-- Google Fonts for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fef9f0;
+            color: #1e2a2e;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, #ffb347 0%, #ff7e05 100%);
+            color: white;
+            text-align: center;
+            padding: 64px 24px 80px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .motto {
+            font-size: 1.25rem;
+            font-style: italic;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 32px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 16px;
+        }
+
+        /* Sections */
+        section {
+            padding: 64px 0;
+            border-bottom: 1px solid #ffe1b3;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #c25d00;
+        }
+
+        .grid-3 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 28px;
+            padding: 32px 24px;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+        }
+        .card i {
+            font-size: 2.5rem;
+            color: #ff7e05;
+            margin-bottom: 16px;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin-top: 20px;
+        }
+        .pillar {
+            background: white;
+            border-radius: 24px;
+            padding: 28px 20px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+            border-left: 6px solid #ff7e05;
+        }
+        .pillar h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .schedule-table {
+            background: white;
+            border-radius: 28px;
+            overflow-x: auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 16px 20px;
+            border-bottom: 1px solid #ffefd6;
+        }
+        th {
+            background: #fff0e0;
+            font-weight: 700;
+            color: #b34e00;
+        }
+
+        .form-embed {
+            background: white;
+            border-radius: 32px;
+            padding: 24px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            margin-top: 24px;
+        }
+
+        .contact-info {
+            text-align: center;
+            background: #fff3e6;
+            border-radius: 40px;
+            padding: 40px 24px;
+        }
+        .contact-info p {
+            font-size: 1.2rem;
+            margin: 12px 0;
+        }
+        .contact-info i {
+            margin-right: 12px;
+            color: #ff7e05;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px;
+            font-size: 0.85rem;
+            color: #b97f4b;
+            background: #fff6ed;
+        }
+
+        .btn {
+            background: #ff7e05;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.2s;
+        }
+        .btn:hover {
+            background: #e06700;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.4rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+        .age-badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .age-card {
+            background: white;
+            border-radius: 80px;
+            padding: 12px 28px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .highlight {
+            background: #ffeedd;
+            padding: 8px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section with Logo and Motto -->
+<div class="hero">
+    <div class="container">
+        <div class="logo">SEBEZ SUMMER CAMP</div>
+        <div class="motto">Weaving Innovation into Every Future</div>
+        <div class="hero-badge">
+            <i class="fas fa-calendar-alt"></i> Hamle 1 – Nehase 30, 2026 | Mon–Fri · 8AM – 3PM
+        </div>
+        <div style="margin-top: 32px;">
+            <span class="highlight"><i class="fas fa-map-marker-alt"></i> Premier school facility – Safe & inspiring</span>
+        </div>
+        <div style="margin-top: 24px; font-weight: 600;">⭐ Limited to 80 students | Ages 5–12</div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- About Section -->
+    <section>
+        <h2 class="section-title">Where Summer Meets Purpose</h2>
+        <p style="font-size: 1.2rem; text-align: center; max-width: 800px; margin: 0 auto;">Sebez Summer Skills & Innovation Academy turns summer break into a launchpad for curiosity, confidence, and real-world skills. We blend technology, arts, heritage, and leadership — so every child grows beyond the classroom.</p>
+    </section>
+
+    <!-- Age Groups -->
+    <section>
+        <h2 class="section-title">Tailored by Age, Powered by Curiosity</h2>
+        <div class="age-badge-group">
+            <div class="age-card"><i class="fas fa-child"></i> Ages 5–7 · Discovery & Play</div>
+            <div class="age-card"><i class="fas fa-users"></i> Ages 8–9 · Build & Collaborate</div>
+            <div class="age-card"><i class="fas fa-rocket"></i> Ages 10–12 · Lead & Create</div>
+        </div>
+    </section>
+
+    <!-- Program Pillars (5 core areas) -->
+    <section>
+        <h2 class="section-title">What Your Child Will Experience</h2>
+        <div class="pillars-grid">
+            <div class="pillar"><h3><i class="fas fa-microchip"></i> Technology & Robotics</h3><p>Hands-on electronics, Arduino, robotics, and foundational coding that sparks innovation.</p></div>
+            <div class="pillar"><h3><i class="fas fa-comments"></i> Public Speaking & English Fluency</h3><p>Confidence-building presentations and English immersion for real-world communication.</p></div>
+            <div class="pillar"><h3><i class="fas fa-palette"></i> Creative Arts & Design</h3><p>Painting, illustration, crafting, and design thinking to unlock imagination.</p></div>
+            <div class="pillar"><h3><i class="fas fa-landmark"></i> Ethiopian Heritage & Culture</h3><p>History, national heroes, traditions, and regional cultures — fostering identity and pride.</p></div>
+            <div class="pillar"><h3><i class="fas fa-star-of-life"></i> Leadership & Character Building</h3><p>Teamwork, responsibility, emotional intelligence, and integrity for tomorrow’s leaders.</p></div>
+        </div>
+    </section>
+
+    <!-- Daily Schedule -->
+    <section>
+        <h2 class="section-title">A Day at Sebez Camp</h2>
+        <div class="schedule-table">
+            <table>
+                <thead><tr><th>Time</th><th>Activity</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>8:00 – 8:20 AM</td><td>Morning Assembly & Goal Setting</td></tr>
+                    <tr><td>8:20 – 9:40 AM</td><td>Academic Session I (Tech / Language)</td></tr>
+                    <tr><td>9:40 – 10:00 AM</td><td>Morning Recess</td></tr>
+                    <tr><td>10:00 – 11:20 AM</td><td>Academic Session II</td></tr>
+                    <tr><td>11:20 AM – 12:00 PM</td><td>Collaborative Labs & Projects</td></tr>
+                    <tr><td>12:00 – 1:00 PM</td><td>Lunch Break</td></tr>
+                    <tr><td>1:00 – 2:00 PM</td><td>Arts & Cultural Seminars</td></tr>
+                    <tr><td>2:00 – 2:45 PM</td><td>Innovation Challenges & Clubs</td></tr>
+                    <tr><td>2:45 – 3:00 PM</td><td>Reflection & Dismissal</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="text-align: center; margin-top: 24px;"><i class="fas fa-utensils"></i> Lunch & snacks are supervised · All activities led by trained mentors</p>
+    </section>
+
+    <!-- Registration + Embedded Google Form -->
+    <section>
+        <h2 class="section-title">Reserve Your Child’s Spot</h2>
+        <p style="text-align: center; max-width: 680px; margin: 0 auto 20px auto;">Spaces are extremely limited (only 80 students). Fill out the registration form and our team will reach out within 3–5 business days with fee details and enrollment confirmation.</p>
+        <div class="form-embed">
+            <!-- Embedded Google Form (using the published form URL you provided) -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScCh3HQG_h7Y2DPsC9jpeNC1joCB1nQ-BG7-N1BDRZBPPyDMw/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 20px;">Loading…</iframe>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">📌 Direct form link (if needed): <a href="https://docs.google.com/forms/d/e/1FAIpQLScCh3HQG_h7Y2DPsC9jpeNC1joCB1nQ-BG7-N1BDRZBPPyDMw/viewform?usp=publish-editor" target="_blank">Open registration form</a></p>
+    </section>
+
+    <!-- Contact & Team -->
+    <section>
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-user-circle"></i> Bontu Shambel – Executive Director</p>
+            <p><i class="fab fa-whatsapp"></i> +251 924 431 371</p>
+            <p><i class="fas fa-envelope"></i> bon2shambel@gmail.com</p>
+            <p style="margin-top: 20px;"><i class="fas fa-shield-alt"></i> Safety & support team on-site daily · University mentors + security</p>
+            <a href="#top" class="btn" style="margin-top: 24px;"><i class="fas fa-arrow-up"></i> Back to top</a>
+        </div>
+    </section>
+</div>
+
+<div class="footer">
+    <p>© 2026 Sebez Summer Skills & Innovation Academy — <strong>Weaving Innovation into Every Future</strong></p>
+    <p style="margin-top: 6px;">📍 Hamle 1 – Nehase 30, 2026 | Premier facility | Ethiopian heritage inspired</p>
+</div>
+
+</body>
+</html>
